@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MULTI VENTAS - Examen Práctico</title>
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- CSS Personalizado -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 1. Encabezado Superior -->
+  <header class="top-header">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Logo -->
+        <div class="col-6 col-md-3">
+          <a href="#" class="text-decoration-none">
+            <span class="brand-title">MULTI<span class="brand-badge">VENTAS</span></span>
+          </a>
+        </div>
+        <!-- Buscador Central -->
+        <div class="col-12 col-md-6 my-2 my-md-0">
+          <form class="d-flex">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for products..." aria-label="Buscar">
+              <button class="btn btn-outline-secondary bg-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Servicio al cliente -->
+        <div class="col-6 col-md-3 text-end d-none d-md-block">
+          <div class="small text-muted">Servicio al Cliente</div>
+          <div class="fw-bold">+52 9610112345</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. Barra de Navegación -->
+  <nav class="navbar navbar-expand-lg main-navbar p-0 sticky-top">
+    <div class="container">
+      <!-- Menú Categorías Estilo Dropdown -->
+      <div class="dropdown me-3">
+        <button class="btn category-btn dropdown-toggle d-flex align-items-center gap-2" type="button" id="categoriesDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list fs-5"></i> Categorías
+        </button>
+        <ul class="dropdown-menu shadow rounded-0 mt-0" aria-labelledby="categoriesDropdown">
+          <li><a class="dropdown-item" href="#"><i class="bi bi-gender-female me-2"></i>Moda Femenina</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-gender-male me-2"></i>Moda Masculina</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-emoji-smile me-2"></i>Ropa Infantil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-camera me-2"></i>Electrónica</a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-house me-2"></i>Hogar y Decoración</a></li>
+        </ul>
+      </div>
+
+      <button class="navbar-toggler text-white my-2 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <i class="bi bi-list fs-2 text-white"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#tienda">Tienda</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#nosotros">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link nav-link-custom" href="#contacto">Contacto</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 text-white">
+          <a href="#" class="text-white position-relative fs-5 ms-2"><i class="bi bi-heart"></i></a>
+          <a href="#" class="text-white position-relative fs-5 ms-2">
+            <i class="bi bi-bag"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" style="font-size:0.6rem;" id="cart-count">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 3. Sección Principal (Hero Slider + Banners Laterales) -->
+  <section class="my-4">
+    <div class="container">
+      <div class="row g-3">
+        
+        <!-- Carrusel Principal -->
+        <div class="col-lg-8">
+          <div id="heroCarousel" class="carousel slide carousel-fade shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+              
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="hero-slider-item" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=80');">
+                  <div class="hero-overlay">
+                    <h2 class="hero-title">Moda Femenina</h2>
+                    <p class="lead d-none d-md-block">Descubre las últimas tendencias para esta temporada con diseños exclusivos.</p>
+                    <a href="#tienda" class="btn btn-hero">Comprar</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="hero-slider-item" style="background-image: url('https://images.unsplash.com/photo-1488161628813-04466f872be2?auto=format&fit=crop&w=1200&q=80');">
+                  <div class="hero-overlay">
+                    <h2 class="hero-title">Estilo Urbano</h2>
+                    <p class="lead d-none d-md-block">Elegancia y comodidad combinadas en nuestra colección masculina.</p>
+                    <a href="#tienda" class="btn btn-hero">Ver Colección</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <div class="hero-slider-item" style="background-image: url('https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?auto=format&fit=crop&w=1200&q=80');">
+                  <div class="hero-overlay">
+                    <h2 class="hero-title">Colección Infantil</h2>
+                    <p class="lead d-none d-md-block">Ropa divertida y cómoda diseñada para los más pequeños.</p>
+                    <a href="#tienda" class="btn btn-hero">Explorar</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide-to="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide-to="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Banners Laterales Apilados -->
+        <div class="col-lg-4 d-flex flex-column gap-3">
+          
+          <!-- Banner Superior -->
+          <div class="side-banner shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=600&q=80');">
+            <div class="side-banner-overlay">
+              <span class="badge-discount mb-1">AHORRA 20%</span>
+              <h4 class="fw-bold mb-1">Ofertas de temporada</h4>
+              <a href="#tienda" class="btn btn-banner">Comprar</a>
+            </div>
+          </div>
+
+          <!-- Banner Inferior -->
+          <div class="side-banner shadow-sm" style="background-image: url('https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80');">
+            <div class="side-banner-overlay">
+              <span class="badge-discount mb-1">AHORRA 30%</span>
+              <h4 class="fw-bold mb-1">Ofertas especiales</h4>
+              <a href="#tienda" class="btn btn-banner">Comprar</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Sección Galería de Categorías -->
+  <section id="galeria" class="py-4">
+    <div class="container">
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="cat-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=400&q=80" alt="Moda Dama">
+            <div class="cat-overlay">
+              <h6 class="m-0 fw-bold">Moda Dama</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80" alt="Fotografía">
+            <div class="cat-overlay">
+              <h6 class="m-0 fw-bold">Fotografía</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Calzado">
+            <div class="cat-overlay">
+              <h6 class="m-0 fw-bold">Calzado</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="cat-card shadow-sm">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Belleza">
+            <div class="cat-overlay">
+              <h6 class="m-0 fw-bold">Belleza</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Sección de Productos Destacados -->
+  <section id="tienda" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold">Productos Destacados</h3>
+        <div class="bg-warning mx-auto" style="height: 3px; width: 60px;"></div>
+      </div>
+
+      <div class="row g-4">
+        
+        <!-- Producto 1 -->
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=400&q=80" alt="Cámara Profesional">
+            </div>
+            <div class="card-body p-3 text-center">
+              <small class="text-muted">Electrónica</small>
+              <h6 class="card-title text-truncate fw-bold my-1">Cámara Mirrorless 4K</h6>
+              <div class="product-price my-2">$850.00</div>
+              <button class="btn btn-add-cart"><i class="bi bi-cart-plus me-1"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=400&q=80" alt="Sudadera Azul">
+            </div>
+            <div class="card-body p-3 text-center">
+              <small class="text-muted">Moda</small>
+              <h6 class="card-title text-truncate fw-bold my-1">Sudadera Casual Azul</h6>
+              <div class="product-price my-2">$45.00</div>
+              <button class="btn btn-add-cart"><i class="bi bi-cart-plus me-1"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=400&q=80" alt="Lámpara de Mesa">
+            </div>
+            <div class="card-body p-3 text-center">
+              <small class="text-muted">Hogar</small>
+              <h6 class="card-title text-truncate fw-bold my-1">Lámpara Elegante</h6>
+              <div class="product-price my-2">$62.00</div>
+              <button class="btn btn-add-cart"><i class="bi bi-cart-plus me-1"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="col-6 col-md-3">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?auto=format&fit=crop&w=400&q=80" alt="Tenis Deportivos">
+            </div>
+            <div class="card-body p-3 text-center">
+              <small class="text-muted">Calzado</small>
+              <h6 class="card-title text-truncate fw-bold my-1">Tenis Infantiles Black</h6>
+              <div class="product-price my-2">$55.00</div>
+              <button class="btn btn-add-cart"><i class="bi bi-cart-plus me-1"></i> Agregar</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Pie de Página (Footer) -->
+  <footer class="pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h5 class="fw-bold">MULTI VENTAS</h5>
+          <p class="small">Tu tienda en línea de confianza con las mejores ofertas y productos de la más alta calidad.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces Rápidos</h5>
+          <ul class="list-unstyled small">
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Envíos y Devoluciones</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contacto</h5>
+          <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>Tuxtla Gutiérrez, Chiapas</p>
+          <p class="small mb-1"><i class="bi bi-envelope me-2"></i>contacto@multiventas.com</p>
+          <p class="small"><i class="bi bi-telephone me-2"></i>+52 9610112345</p>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center small">
+        &copy; 2026 MULTI VENTAS. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+  <!-- Script Personalizado JS -->
+  <script src="script.js"></script>
+</body>
+</html>
